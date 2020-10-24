@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 import seaborn as sns
 import os
-df = pd.read_csv("D:/Bai-tap/Py4DS_Lab1/Py4DS_Lab1/Py4DS_Lab1_Dataset/xAPI-Edu-Data.csv")
+df = pd.read_csv("xAPI-Edu-Data.csv")
 df.head(10)
 df.info()
 df.describe()

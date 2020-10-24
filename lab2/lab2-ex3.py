@@ -11,7 +11,7 @@ np.random.seed(2)
 
 # Nhap data
 
-data = pd.read_csv('D:/Bai-tap/Py4DS_Lab2/Py4DS_Lab2/Py4DS_Lab2_Dataset/creditcard.csv')
+data = pd.read_csv('creditcard.csv')
 
 data.head()
 

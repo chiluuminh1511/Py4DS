@@ -11,7 +11,7 @@ from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 
 # Nhap data
 
-data = pd.read_csv('D:/Bai-tap/Py4DS_Lab2/Py4DS_Lab2/Py4DS_Lab2_Dataset/HappinessReport2020.csv')
+data = pd.read_csv('HappinessReport2020.csv')
 
 data.head()
 
