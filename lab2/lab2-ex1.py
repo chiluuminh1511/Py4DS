@@ -64,11 +64,11 @@ for i in range(1,17):
     print("*"*20)
 
 sns.pairplot(df,hue='Class')
-
+plt.show()
 plt.figure(figsize=(14,12))
 sns.heatmap(df.corr(),linewidths=1,cmap="YlGnBu",annot=True)
-#plt.yticks(rotation=0)
-
+plt.yticks(rotation=0)
+plt.show()
 # plot label 
 # kiem tra phan bo cua labels co deu hay khong?
 # neu can bang=>co the su dung truc tiep duoc
@@ -80,7 +80,7 @@ df.Class.value_counts(normalize=True).plot(kind='bar')
 df.Class.value_counts()
 
 df.Class.value_counts(normalize=True)
-
+plt.show()
 plt.subplots(figsize=(20,8))
 df["RaisedHands"].value_counts().sort_index().plot.bar()
 plt.title("No. of times vs no. of  student raised thier hands on partucular time " )
