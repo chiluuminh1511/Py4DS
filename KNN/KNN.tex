@@ -38,11 +38,11 @@
 
 %trang 1
 \section{Giới thiệu}
-K-nearest neighbor là một trong những thuật toán đơn giản nhất trong Machine Learning. Khi training, thuật toán này không học một điều gì từ dữ liệu training, mọi tính toán được thực hiện khi nó cần dự đoán kết quả của dữ liệu mới.K-nearest neighbor có thể áp dụng được vào cả hai loại của bài toán Supervised learning là Classification và Regression.
+K-nearest neighbor là một trong những thuật toán đơn giản nhất trong Machine Learning. Khi training, thuật toán này không học một điều gì từ dữ liệu training, mọi tính toán được thực hiện khi nó cần dự đoán kết quả của dữ liệu mới. K-nearest neighbor có thể áp dụng được vào cả hai loại của bài toán Supervised learning là Classification và Regression.
 
 \begin{tabular}{ |c|c|c| }
 \hline
-Ngôn ngữ người & Ngôn ngữ Máy Học & Machine Learning \\ \hline
+\textbf{Ngôn ngữ người} & \textbf{Ngôn ngữ Máy Học} & \textbf{Machine Learning} \\ \hline
 Câu hỏi & Điểm dữ liệu & Data point \\ \hline
 Đáp án & Đầu ra, nhãn & Output, Label \\ \hline
 Ôn thi & Huấn luyện & Training \\ \hline
@@ -196,7 +196,7 @@ Output:
 
 %trang 5
 \begin{lstlisting}
-Accuracy of 1NN: 94.00 %
+Accuracy of 1NN: 0.94
 \end{lstlisting}
 
 Nhận thấy rằng chỉ xét 1 điểm gần nhất có thể dẫn đến kết quả sai nếu điểm đó là nhiễu. Một cách có thể làm tăng độ chính xác là tăng số lượng điểm lân cận lên, ví dụ 10 điểm, và xem xem trong 10 điểm gần nhất, class nào chiếm đa số thì dự đoán kết quả là class đó. Kỹ thuật dựa vào đa số này được gọi là major voting.
@@ -212,7 +212,7 @@ print('Accuracy of 10NN with major voting:', accuracy_score(y_test, y_pred))
 Output:
 
 \begin{lstlisting}
-Accuracy of 10NN with major voting: 98.00 %
+Accuracy of 10NN with major voting: 0.98
 \end{lstlisting}
 
 \textbf{Đánh trọng số cho các điểm lân cận}
@@ -232,7 +232,7 @@ print('Accuracy of 10NN (1/distance weights):', accuracy_score(y_test, y_pred))
 Output:
 
 \begin{lstlisting}
-Accuracy of 10NN (1/distance weights): 100.00 %
+Accuracy of 10NN (1/distance weights): 1.00
 \end{lstlisting}
 
 \textbf{Chú ý:}
@@ -258,7 +258,7 @@ print('Accuracy of 10NN (customized weights):', accuracy_score(y_test, y_pred))
 Output:
 
 \begin{lstlisting}
-Accuracy of 10NN (customized weights): 98.00 %
+Accuracy of 10NN (customized weights): 0.98
 \end{lstlisting}
 
 Trong trường hợp này, kết quả tương đương với kỹ thuật major voting. Để đánh giá chính xác hơn kết quả của KNN với K khác nhau, cách định nghĩa khoảng cách khác nhau và cách đánh trọng số khác nhau, chúng ta cần thực hiện quá trình trên với nhiều cách chia dữ liệu training và test khác nhau rồi lấy kết quả trung bình, vì rất có thể dữ liệu phân chia trong 1 trường hợp cụ thể là rất tốt hoặc rất xấu (bias). Đây cũng là cách thường được dùng khi đánh giá hiệu năng của một thuật toán cụ thể nào đó.
